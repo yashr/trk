@@ -1,7 +1,7 @@
 class MovementPdf < Prawn::Document
 
   def initialize(movement)
-    super(top_margin: 70)
+    super(top_margin: 70, bottom_margin: 13)
     @movement = movement
     movement_header
     movement_details
