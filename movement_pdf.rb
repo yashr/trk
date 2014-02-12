@@ -1,32 +1,7 @@
 class MovementPdf < Prawn::Document
 
   def initialize(movement)
-    super(top_margin: 7, bottom_margin:1)
-    @movement = movement
-    header
-    movement_header
-    movement_details
-    footer
-    number_page
-  end
-
-#----------------------------------------------------------------------------------------------------- 
-  def header
-
-         
-   logo_path = "#{Rails.root}/app/assets/images/atlas logo.PNG"
-   image logo_path, height: 87, width: 120, :align => :left
-   
- 
-  end
-#----------------------------------------------------------------------------------------------------- 
-  def movement_header
-    text "Movement \# " + "#{@movement}" + " #{@movement.action}",
-        :size   =>  20,
-        :align  =>  :center,
-        :style  =>  :bold
-  end
-#----------------------------------------------------------------------------------------------------- 
+----- 
   def movement_details
     move_up 3
     font_size 10
